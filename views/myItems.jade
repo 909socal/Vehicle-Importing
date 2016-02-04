@@ -1,0 +1,33 @@
+extends layout
+
+block content
+ h1 User's Vehicles
+ h5 Click Vehicle Model For More Details)
+ br
+ a(href='/addItem') Add Vehicle
+ <br>
+ table.table
+  thead
+      tr
+        th.name-sort Model
+        th Make 
+        th Year
+        th Price
+        th Image
+  tbody.items-list
+    each item in items
+      tr(id=item._id)
+        td.name-col #{item.model}
+        td #{item.make}
+        td #{item.year}
+        td #{item.price}
+        td
+          img(src=item.image).thumb
+        td.delete-col Delete
+        td.edit-col Edit
+        td.barter Barter
+
+
+
+block scripts
+ script(src='./js/myItems.js')

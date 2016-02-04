@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h1 Enter a Vehicle
+  br
+  form(role='form')
+      .form-group
+        label(for='model') Model:
+        input#model.form-control(type='text', placeholder='Car Model')
+      .form-group
+        label(for='make') Make:
+        input#make.form-control(type='text', placeholder='Style')
+      .form-group
+        label(for='image') Image URL:
+        input#image.form-control(type='text', placeholder='URL')
+      .form-group
+        label(for='price') Price:
+        input#price.form-control(type='text', placeholder='$1.00')
+      .form-group
+        label(for='year') Year:
+        input#year.form-control(type='text', placeholder='Enter Year')
+      .form-group
+        input#create-item-btn(type='submit', value='Create')
+
+block scripts
+  script(src='./js/addItem.js')

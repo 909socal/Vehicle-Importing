@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1 Edit Vehicle Listing 
+  br
+  form(role='form')
+      .form-group
+        label(for='pwd') Model:
+        input#model.form-control(type='text', value='#{model}')
+      .form-group
+        label(for='pwd') Make:
+        input#make.form-control(type='text', value='#{make}')
+      .form-group
+        label(for='pwd') Year:
+        input#year.form-control(type='text', value='#{year}')
+      .form-group
+        label(for='pwd') Price:
+        input#price.form-control(type='text', value='#{price}')
+      .form-group
+        input#create-item-btn(type='submit', value='Create')
+      a(href='/myItems') Back
+      .itemId(id=itemId)
+
+block scripts
+  script(src='/js/editItem.js')
